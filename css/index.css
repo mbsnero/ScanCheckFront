@@ -1,0 +1,262 @@
+/* ====================   VARIABLES   ==================== */
+/* ====================   GLOBAL   ==================== */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* ====================   BUTTON   ==================== */
+.btn {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  margin-bottom: 15px;
+  padding: 17.5px;
+  background-color: #57b846;
+  border-radius: 25px;
+}
+
+.btn:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background-color: #1b3815;
+}
+
+/* ====================   TABLE   ==================== */
+.table-wrapper {
+  border-radius: 25px;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  padding: 10px;
+}
+
+.table-wrapper .table {
+  border-collapse: collapse;
+}
+
+.table-wrapper .table td, .table-wrapper .table th {
+  padding: 10px;
+  border-bottom: 3px solid #57b846;
+  text-align: center;
+}
+
+.table-wrapper .table td .btn, .table-wrapper .table th .btn {
+  margin-bottom: 0;
+}
+
+/* ====================   MODAL   ==================== */
+.modal-fade {
+  display: none;
+}
+
+.modal-fade:before {
+  content: '';
+  background: white;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  z-index: 9999;
+}
+
+.modal {
+  position: fixed;
+  -webkit-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.3);
+  top: 12%;
+  left: 50%;
+  width: 500px;
+  margin-left: -250px;
+  background: white;
+  border-radius: 25px;
+  z-index: 99999;
+  opacity: 1;
+}
+
+/* ====================   ADMIN PAGE   ==================== */
+.admin-page {
+  font-family: 'Ubuntu';
+  width: 80%;
+  min-width: 500px;
+  border-radius: 25px;
+  -webkit-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.3);
+  margin: 80px auto;
+  padding: 20px;
+}
+
+.admin-page .exit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.admin-page .exit .btn {
+  width: 200px;
+}
+
+.admin-page .main-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.admin-page .main-block .aside-block {
+  margin-right: 50px;
+  margin-top: 100px;
+}
+
+.admin-page .main-block .aside-block .btn {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.admin-page .main-block .right-block .top-panel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 40px 0;
+}
+
+.admin-page .main-block .right-block .top-panel a {
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #57b846;
+}
+
+.admin-page .main-block .right-block .top-panel a:hover {
+  text-decoration: underline;
+}
+
+.admin-page .modal {
+  height: 620px;
+}
+
+.admin-page .modal .modal-title {
+  width: 100%;
+  padding-top: 24px;
+  padding-bottom: 14px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  text-align: center;
+  color: white;
+  font-size: 30px;
+  background-color: #57b846;
+}
+
+.admin-page .modal .area-block {
+  padding: 20px 50px 0;
+}
+
+.admin-page .modal .area-block .area-text {
+  margin-bottom: 15px;
+  margin-left: 15px;
+}
+
+.admin-page .modal .area-block .area {
+  font-family: 'Ubuntu';
+  line-height: 20px;
+  resize: none;
+  font-size: 15px;
+  width: 100%;
+  height: 120px;
+  margin-bottom: 10px;
+  background-color: #ebebeb;
+  border: none;
+  outline: none;
+  padding: 10px 15px;
+  border-radius: 25px;
+}
+
+.admin-page .modal .area-block .save {
+  text-align: right;
+  width: 100%;
+  color: #57b846;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.admin-page .modal .area-block .save:hover {
+  text-decoration: underline;
+}
+
+.admin-page .modal .bottom-btn-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.admin-page .modal .bottom-btn-block .bottom-btn {
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  width: 50%;
+  background-color: #57b846;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  cursor: pointer;
+}
+
+.admin-page .modal .bottom-btn-block .bottom-btn:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background-color: #1b3815;
+}
+
+.admin-page .modal .bottom-btn-block .bottom-btn:first-child {
+  border-bottom-left-radius: 25px;
+}
+
+.admin-page .modal .bottom-btn-block .bottom-btn:last-child {
+  border-bottom-right-radius: 25px;
+}
+
+@media screen and (max-width: 1300px) {
+  .admin-page {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .table-wrapper {
+    overflow: scroll;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .admin-page .exit .btn {
+    width: 100%;
+  }
+  .admin-page .main-block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .admin-page .main-block .aside-block {
+    margin-top: 25px;
+    margin-right: 0;
+  }
+}
+/*# sourceMappingURL=index.css.map */

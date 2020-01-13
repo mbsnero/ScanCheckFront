@@ -1,0 +1,259 @@
+/* ====================   VARIABLES   ==================== */
+
+$green: #57b846;
+$btn-background-hover: #1b3815;
+$white: white;
+$input-background: #ebebeb;
+
+/* ====================   GLOBAL   ==================== */
+
+* {
+  box-sizing: border-box;
+}
+
+/* ====================   BUTTON   ==================== */
+
+.btn {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+  color: $white;
+  font-size: 15px;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  margin-bottom: 15px;
+  padding: 17.5px;
+  background-color: $green;
+  border-radius: 25px;
+  
+
+  &:hover {
+    transition: 0.5s;
+    background-color: $btn-background-hover;
+  }
+}
+
+/* ====================   TABLE   ==================== */
+
+.table-wrapper {
+  border-radius: 25px;
+  box-sizing: content-box;
+  padding: 10px;
+
+  .table {
+    border-collapse: collapse;
+  
+    td, th {
+      padding: 10px;
+      border-bottom: 3px solid $green;
+      text-align: center;
+      .btn {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+/* ====================   MODAL   ==================== */
+
+
+.modal-fade {
+	display: none;
+}
+
+.modal-fade:before {
+	content: '';
+	background: $white;
+	position: fixed; 
+	left: 0;
+	top: 0;
+	width: 100%; 
+	height: 100%;
+	opacity: 0.7;
+	z-index: 9999;
+}
+
+.modal {
+  position: fixed;
+  box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.3);
+	top: 12%;
+	left: 50%;
+  width: 500px;
+	margin-left: -250px;	
+	background: $white;
+	border-radius: 25px; 
+	z-index: 99999;
+	opacity: 1;	
+}
+
+/* ====================   ADMIN PAGE   ==================== */
+
+.admin-page {
+  font-family: 'Ubuntu';
+  width: 80%;
+  min-width: 500px;
+  border-radius: 25px;
+  box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.3);
+  margin: 80px auto;
+  padding: 20px;
+
+  .exit {
+    display: flex;
+    justify-content: flex-end;
+    .btn {
+      width: 200px;
+    }
+  }
+
+  .main-block {
+    display: flex;
+    justify-content: space-between;
+
+    .aside-block {
+      margin-right: 50px;
+      margin-top: 100px;
+
+      .btn {
+        width: 100%;
+        margin-bottom: 40px;
+      }
+    }
+
+    .right-block {
+      .top-panel {
+        display: flex;
+        justify-content: space-around;
+        margin: 40px 0;
+
+        a {
+          font-size: 18px;
+          font-weight: bold;
+          text-decoration: none;
+          color: $green;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  .modal {
+    height: 620px;
+
+    .modal-title {
+      width: 100%;
+      padding-top: 24px;
+      padding-bottom: 14px;
+      border-top-left-radius: 25px;
+      border-top-right-radius: 25px;
+      text-align: center;
+      color: $white;
+      font-size: 30px;
+      background-color: $green;
+    }
+
+    .area-block {
+      padding: 20px 50px 0;
+  
+      .area-text {
+        margin-bottom: 15px;
+        margin-left: 15px;
+      }
+  
+      .area {
+        font-family: 'Ubuntu';
+        line-height: 20px;
+        resize: none;
+        font-size: 15px;
+        width: 100%;
+        height: 120px;
+        margin-bottom: 10px;
+        background-color: $input-background;
+        border: none;
+        outline: none;
+        padding: 10px 15px;
+        border-radius: 25px;
+      }
+  
+      .save {
+        text-align: right;
+        width: 100%;
+        color: $green;
+        font-weight: bold;
+        cursor: pointer;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .bottom-btn-block {
+      display: flex;
+      width: 100%;
+      margin-top: 40px;
+      
+      .bottom-btn {
+        font-size: 18px;
+        font-weight: bold;
+        color: $white;
+        text-align: center;
+        width: 50%;
+        background-color: $green;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        cursor: pointer;
+
+        &:hover {
+          transition: 0.5s;
+          background-color: $btn-background-hover;
+        }
+
+        &:first-child {
+          border-bottom-left-radius: 25px;
+        }
+
+        &:last-child {
+          border-bottom-right-radius: 25px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .admin-page {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .table-wrapper {
+    overflow: scroll;
+  }
+}
+
+@media screen and (max-width: 900px) {
+
+  .admin-page {
+    .exit {
+      .btn {
+        width: 100%;
+      }
+    }
+
+    .main-block {
+      flex-direction: column;
+
+      .aside-block {
+        margin-top: 25px;
+        margin-right: 0;
+      }
+    }
+  }
+}
