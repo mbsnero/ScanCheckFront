@@ -7,6 +7,8 @@
 
 /* ====================   BUTTON   ==================== */
 .btn {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: 'Ubuntu', sans-serif;
   font-weight: bold;
   color: white;
@@ -24,7 +26,7 @@
 .btn:hover {
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  background-color: #1b3815;
+  background-color: green;
 }
 
 /* ====================   TABLE   ==================== */
@@ -39,14 +41,26 @@
   border-collapse: collapse;
 }
 
-.table-wrapper .table td, .table-wrapper .table th {
+.table-wrapper .table td,
+.table-wrapper .table th {
   padding: 10px;
   border-bottom: 3px solid #57b846;
   text-align: center;
 }
 
-.table-wrapper .table td .btn, .table-wrapper .table th .btn {
+.table-wrapper .table td .btn,
+.table-wrapper .table th .btn {
   margin-bottom: 0;
+}
+
+.table-wrapper .status-success {
+  font-weight: bold;
+  color: #57b846;
+}
+
+.table-wrapper .status-error {
+  font-weight: bold;
+  color: red;
 }
 
 /* ====================   MODAL   ==================== */
@@ -78,6 +92,88 @@
   border-radius: 25px;
   z-index: 99999;
   opacity: 1;
+}
+
+.modal-title {
+  width: 100%;
+  padding-top: 24px;
+  padding-bottom: 14px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  text-align: center;
+  color: white;
+  font-size: 30px;
+  background-color: #57b846;
+}
+
+.bottom-btn-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.bottom-btn-block .bottom-btn {
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  width: 50%;
+  background-color: #57b846;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  cursor: pointer;
+}
+
+.bottom-btn-block .bottom-btn:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background-color: green;
+}
+
+.bottom-btn-block .bottom-btn:first-child {
+  border-bottom-left-radius: 25px;
+}
+
+.bottom-btn-block .bottom-btn:last-child {
+  border-bottom-right-radius: 25px;
+}
+
+/* ====================   INPUT FILE   ==================== */
+.example-2 .btn-tertiary {
+  color: white;
+  padding: 0;
+  line-height: 40px;
+  width: 100%;
+  margin: auto;
+  display: block;
+}
+
+.example-2 .input-file {
+  width: .1px;
+  height: .1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.example-2 .input-file + .js-labelFile {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+.example-2 .input-file + .js-labelFile .icon:before {
+  content: "\f093";
+}
+
+.example-2 .input-file + .js-labelFile.has-file .icon:before {
+  content: "\f00c";
+  color: #5AAC7B;
 }
 
 /* ====================   ADMIN PAGE   ==================== */
@@ -148,18 +244,6 @@
   height: 620px;
 }
 
-.admin-page .modal .modal-title {
-  width: 100%;
-  padding-top: 24px;
-  padding-bottom: 14px;
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
-  text-align: center;
-  color: white;
-  font-size: 30px;
-  background-color: #57b846;
-}
-
 .admin-page .modal .area-block {
   padding: 20px 50px 0;
 }
@@ -198,40 +282,6 @@
   text-decoration: underline;
 }
 
-.admin-page .modal .bottom-btn-block {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  margin-top: 40px;
-}
-
-.admin-page .modal .bottom-btn-block .bottom-btn {
-  font-size: 18px;
-  font-weight: bold;
-  color: white;
-  text-align: center;
-  width: 50%;
-  background-color: #57b846;
-  padding-top: 25px;
-  padding-bottom: 25px;
-  cursor: pointer;
-}
-
-.admin-page .modal .bottom-btn-block .bottom-btn:hover {
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  background-color: #1b3815;
-}
-
-.admin-page .modal .bottom-btn-block .bottom-btn:first-child {
-  border-bottom-left-radius: 25px;
-}
-
-.admin-page .modal .bottom-btn-block .bottom-btn:last-child {
-  border-bottom-right-radius: 25px;
-}
-
 @media screen and (max-width: 1300px) {
   .admin-page {
     width: 90%;
@@ -258,5 +308,70 @@
     margin-top: 25px;
     margin-right: 0;
   }
+}
+
+/* ====================   MANAGE PAGE   ==================== */
+.manage-page {
+  font-family: 'Ubuntu';
+  width: 80%;
+  min-width: 500px;
+  border-radius: 25px;
+  -webkit-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.3);
+  margin: 80px auto;
+  padding: 40px;
+}
+
+.manage-page .page-title {
+  text-align: center;
+  color: #57b846;
+  margin-bottom: 100px;
+}
+
+.manage-page .table-wrapper {
+  width: 100%;
+  margin-bottom: 50px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.manage-page .table-wrapper .table {
+  width: 100%;
+}
+
+.manage-page .btn-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.manage-page .modal .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 20px 50px 0;
+  margin-top: 20px;
+}
+
+.manage-page .modal .form .input {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 20px !important;
+  border: none;
+  outline: none;
+  font-family: 'Ubuntu';
+  font-size: 15px;
+  margin-bottom: 10px;
+  background-color: #ebebeb;
+  padding: 10px 15px;
+  border-radius: 25px;
 }
 /*# sourceMappingURL=index.css.map */

@@ -1,7 +1,7 @@
 /* ====================   VARIABLES   ==================== */
 
 $green: #57b846;
-$btn-background-hover: #1b3815;
+$btn-background-hover: green;
 $white: white;
 $input-background: #ebebeb;
 
@@ -14,6 +14,7 @@ $input-background: #ebebeb;
 /* ====================   BUTTON   ==================== */
 
 .btn {
+  box-sizing: border-box;
   font-family: 'Ubuntu', sans-serif;
   font-weight: bold;
   color: $white;
@@ -26,7 +27,7 @@ $input-background: #ebebeb;
   padding: 17.5px;
   background-color: $green;
   border-radius: 25px;
-  
+
 
   &:hover {
     transition: 0.5s;
@@ -43,15 +44,27 @@ $input-background: #ebebeb;
 
   .table {
     border-collapse: collapse;
-  
-    td, th {
+
+    td,
+    th {
       padding: 10px;
       border-bottom: 3px solid $green;
       text-align: center;
+
       .btn {
         margin-bottom: 0;
       }
     }
+  }
+
+  .status-success {
+    font-weight: bold;
+    color: $green;
+  }
+
+  .status-error {
+    font-weight: bold;
+    color: red;
   }
 }
 
@@ -59,32 +72,112 @@ $input-background: #ebebeb;
 
 
 .modal-fade {
-	display: none;
+  display: none;
 }
 
 .modal-fade:before {
-	content: '';
-	background: $white;
-	position: fixed; 
-	left: 0;
-	top: 0;
-	width: 100%; 
-	height: 100%;
-	opacity: 0.7;
-	z-index: 9999;
+  content: '';
+  background: $white;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  z-index: 9999;
 }
 
 .modal {
   position: fixed;
   box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.3);
-	top: 12%;
-	left: 50%;
+  top: 12%;
+  left: 50%;
   width: 500px;
-	margin-left: -250px;	
-	background: $white;
-	border-radius: 25px; 
-	z-index: 99999;
-	opacity: 1;	
+  margin-left: -250px;
+  background: $white;
+  border-radius: 25px;
+  z-index: 99999;
+  opacity: 1;
+}
+
+.modal-title {
+  width: 100%;
+  padding-top: 24px;
+  padding-bottom: 14px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  text-align: center;
+  color: $white;
+  font-size: 30px;
+  background-color: $green;
+}
+
+.bottom-btn-block {
+  display: flex;
+  width: 100%;
+  margin-top: 40px;
+
+  .bottom-btn {
+    font-size: 18px;
+    font-weight: bold;
+    color: $white;
+    text-align: center;
+    width: 50%;
+    background-color: $green;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    cursor: pointer;
+
+    &:hover {
+      transition: 0.5s;
+      background-color: $btn-background-hover;
+    }
+
+    &:first-child {
+      border-bottom-left-radius: 25px;
+    }
+
+    &:last-child {
+      border-bottom-right-radius: 25px;
+    }
+  }
+}
+
+/* ====================   INPUT FILE   ==================== */
+
+.example-2 .btn-tertiary {
+  color: white;
+  padding: 0;
+  line-height: 40px;
+  width: 100%;
+  margin: auto;
+  display: block;
+}
+
+.example-2 .input-file {
+  width: .1px;
+  height: .1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1
+}
+
+.example-2 .input-file+.js-labelFile {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 0 10px;
+  cursor: pointer
+}
+
+.example-2 .input-file+.js-labelFile .icon:before {
+  content: "\f093"
+}
+
+.example-2 .input-file+.js-labelFile.has-file .icon:before {
+  content: "\f00c";
+  color: #5AAC7B
 }
 
 /* ====================   ADMIN PAGE   ==================== */
@@ -101,6 +194,7 @@ $input-background: #ebebeb;
   .exit {
     display: flex;
     justify-content: flex-end;
+
     .btn {
       width: 200px;
     }
@@ -143,26 +237,14 @@ $input-background: #ebebeb;
   .modal {
     height: 620px;
 
-    .modal-title {
-      width: 100%;
-      padding-top: 24px;
-      padding-bottom: 14px;
-      border-top-left-radius: 25px;
-      border-top-right-radius: 25px;
-      text-align: center;
-      color: $white;
-      font-size: 30px;
-      background-color: $green;
-    }
-
     .area-block {
       padding: 20px 50px 0;
-  
+
       .area-text {
         margin-bottom: 15px;
         margin-left: 15px;
       }
-  
+
       .area {
         font-family: 'Ubuntu';
         line-height: 20px;
@@ -177,7 +259,7 @@ $input-background: #ebebeb;
         padding: 10px 15px;
         border-radius: 25px;
       }
-  
+
       .save {
         text-align: right;
         width: 100%;
@@ -189,37 +271,6 @@ $input-background: #ebebeb;
 
         &:hover {
           text-decoration: underline;
-        }
-      }
-    }
-
-    .bottom-btn-block {
-      display: flex;
-      width: 100%;
-      margin-top: 40px;
-      
-      .bottom-btn {
-        font-size: 18px;
-        font-weight: bold;
-        color: $white;
-        text-align: center;
-        width: 50%;
-        background-color: $green;
-        padding-top: 25px;
-        padding-bottom: 25px;
-        cursor: pointer;
-
-        &:hover {
-          transition: 0.5s;
-          background-color: $btn-background-hover;
-        }
-
-        &:first-child {
-          border-bottom-left-radius: 25px;
-        }
-
-        &:last-child {
-          border-bottom-right-radius: 25px;
         }
       }
     }
@@ -253,6 +304,63 @@ $input-background: #ebebeb;
       .aside-block {
         margin-top: 25px;
         margin-right: 0;
+      }
+    }
+  }
+}
+
+/* ====================   MANAGE PAGE   ==================== */
+
+.manage-page {
+  font-family: 'Ubuntu';
+  width: 80%;
+  min-width: 500px;
+  border-radius: 25px;
+  box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.3);
+  margin: 80px auto;
+  padding: 40px;
+
+  .page-title {
+    text-align: center;
+    color: $green;
+    margin-bottom: 100px;
+  }
+
+  .table-wrapper {
+    width: 100%;
+    margin-bottom: 50px;
+    box-sizing: border-box;
+
+    .table {
+      width: 100%;
+    }
+  }
+
+  .btn-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .modal {
+
+    .form {
+      display: flex;
+      flex-direction: column;
+      padding: 20px 50px 0;
+      margin-top: 20px;
+
+      .input {
+        box-sizing: border-box;
+        width: 100%;
+        margin-bottom: 20px !important;
+        border: none;
+        outline: none;
+        font-family: 'Ubuntu';
+        font-size: 15px;
+        margin-bottom: 10px;
+        background-color: $input-background;
+        padding: 10px 15px;
+        border-radius: 25px;
       }
     }
   }
