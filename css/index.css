@@ -94,6 +94,27 @@
   opacity: 1;
 }
 
+.modal-show {
+  width: 900px !important;
+  margin-left: -450px;
+}
+
+.modal-show .table-wrapper {
+  padding: 30px;
+  margin-bottom: 0 !important;
+}
+
+.modal-show .close-btn {
+  font-size: 18px;
+  font-weight: bold;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  width: 100%;
+  margin-bottom: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
 .modal-title {
   width: 100%;
   padding-top: 24px;

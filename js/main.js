@@ -69,6 +69,11 @@
     return false;
   });
 
+  $('.close-btn').click(function() {
+    $('#modal-show').fadeOut();
+    return false;
+  })
+
   $(document).keydown(function (e) {
     if (e.keyCode === 27) {
       e.stopPropagation();
