@@ -78,7 +78,6 @@ form = {
 f: {
 	init: {
 		register: function () {
-			console.clear()// just cuz codepen
 			var child, children = document.getElementsByClassName("field"), i
 			for (i = 0; i < children.length; i += 1) {
 				child = children[i]
@@ -152,7 +151,7 @@ f: {
 								nested_nested_child = nested_nested_children[iii]
 								if (util.f.isElem(nested_nested_child) && nested_nested_child.tagName == "LI") {
 									size += util.f.getSize(nested_nested_child, "height")
-									console.log("size: " + size)
+									
 								}
 							}
 							util.f.addStyle(nested_child, ["Height", "Opacity"], [size + "px", 1])

@@ -54,12 +54,20 @@
   $('.modal-open').click(function (event) {
     let id = $(event.target).attr('id');
     switch (id) {
+      case 'admin-settings-btn':
+        $('#modal-admin-settings').fadeIn();
+        break;
       case 'check-btn':
         $('#modal-check').fadeIn();
         break;
       case 'show-btn':
         $('#modal-show').fadeIn();
         break;
+      case 'show-btn-2':
+        $('#modal-show-2').fadeIn();
+        break;
+      case 'change-btn':
+        $('#modal-admin-change').fadeIn();
     }
     return false;
   });
@@ -100,5 +108,9 @@
       fileName ? $label.addClass('has-file').find('.js-fileName').html(fileName) : $label.removeClass('has-file').html(labelVal);
     });
   });
+
+  $('.field').on('click', function() {
+    console.log(123);
+  })
 
 })(jQuery);

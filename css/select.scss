@@ -89,6 +89,7 @@ label.field {
 			will-change: transform;
 		}
 		ul {
+			z-index: 9000!important;
 			background: #fff;
 			box-shadow: 0 1px 4px 0 rgba(0,0,0,0.14);
 			display: block;
@@ -101,10 +102,9 @@ label.field {
 			pointer-events: none;
 			transition-property: height, opacity;
 			width: 100%;
-			z-index: 2;
 			li {
+				z-index: 9000!important;
         font-size: 15px;
-        height: 18px;
         background-color: #ebebeb;
         margin: 0;
         padding: 8px 4px;
@@ -136,4 +136,8 @@ label.field {
 			}
 		}
 	}
+}
+
+.field.focused .field {
+	display: none;
 }

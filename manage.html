@@ -109,10 +109,31 @@
       </div>
     </div>
 
+    <div class="modal-fade" id="modal-show-2">
+      <div class="modal modal-show-2">
+        <div class="modal-title">Просмотр документа</div>
+        123
+        <a class="close-btn btn">Закрыть</a>
+      </div>
+    </div>
+
     <div class="modal-fade" id="modal-check">
       <div class="modal">
         <div class="modal-title">Новая проверка</div>
-        <div class="form">
+        <div class="form" style="margin-top: 0; padding-top: 0;">
+          <label id="img_category_label" class="field" for="img_category" data-value="">
+            <span>Выберете существующую организацию</span>
+            <div id="img_category" class="psuedo_select" name="img_category">
+              <span class="selected"></span>
+              <ul id="img_category_options" class="options">
+                <li class="option" data-value=" opt_1">Организация 1</li>
+                <li class="option" data-value=" opt_2">Организация 2</li>
+                <li class="option" data-value=" opt_3">Организация 3</li>
+                <li class="option" data-value=" opt_4">Организация 4</li>
+              </ul>
+            </div>
+          </label>
+
           <input class="input" type="text" placeholder="Введите ИНН организации">
           <input class="input" type="text" placeholder="Введите полное наименование организации">
           <input class="input" type="text" placeholder="Введите сокращенное наименование организации">
@@ -134,8 +155,19 @@
             </div>
           </label>
 
-          <!-- select -->
- 
+          <label id="img_category_label" class="field" for="img_category" data-value="">
+            <span>Тип загружаемого документа</span>
+            <div id="img_category" class="psuedo_select" name="img_category">
+              <span class="selected"></span>
+              <ul id="img_category_options" class="options">
+                <li class="option" data-value=" opt_1">Документ 1</li>
+                <li class="option" data-value=" opt_2">Документ 2</li>
+                <li class="option" data-value=" opt_3">Документ 3</li>
+                <li class="option" data-value=" opt_4">Документ 4</li>
+              </ul>
+            </div>
+          </label>
+
           <div class="example-2">
             <div class="form-group">
               <input type="file" name="file" id="file" class="input-file">
@@ -144,7 +176,7 @@
                 <span class="js-fileName">Загрузить файл</span>
               </label>
             </div>
-          </div>
+          </div> 
         </div>
         <div class="bottom-btn-block">
           <div class="bottom-btn">Проверить</div>

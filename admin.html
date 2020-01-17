@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/select.css">
   <link rel="stylesheet" href="css/index.css">
   <title>Панель администратора</title>
 </head>
@@ -17,7 +18,7 @@
     </div>
     <div class="main-block">
       <div class="aside-block">
-        <div class="btn">Настройка</div>
+        <div class="btn modal-open" id="admin-settings-btn">Настройка</div>
         <div class="btn">Пользователи</div>
       </div>
       <div class="right-block">
@@ -40,7 +41,7 @@
               <td>Решение; Протокол; Дата; Общества с ограниченной ответственностью;</td>
               <td>ИНН; Полное название организации; ФИО руководителя</td>
               <td>
-                <div class="btn modal-open">Изменить</div>
+                <div class="btn modal-open" id="change-btn">Изменить</div>
               </td>
             </tr>
             <tr>
@@ -48,7 +49,7 @@
               <td>Решение; Протокол; Дата; Общества с ограниченной ответственностью;</td>
               <td>ИНН; Полное название организации; ФИО руководителя</td>
               <td>
-                <div class="btn modal-open">Изменить</div>
+                <div class="btn modal-open" id="change-btn">Изменить</div>
               </td>
             </tr>
             <tr>
@@ -56,7 +57,7 @@
               <td>Решение; Протокол; Дата; Общества с ограниченной ответственностью;</td>
               <td>ИНН; Полное название организации; ФИО руководителя</td>
               <td>
-                <div class="btn modal-open">Изменить</div>
+                <div class="btn modal-open" id="change-btn">Изменить</div>
               </td>
             </tr>
             <tr>
@@ -64,7 +65,7 @@
               <td>Решение; Протокол; Дата; Общества с ограниченной ответственностью;</td>
               <td>ИНН; Полное название организации; ФИО руководителя</td>
               <td>
-                <div class="btn modal-open">Изменить</div>
+                <div class="btn modal-open" id="change-btn">Изменить</div>
               </td>
             </tr>
             <tr>
@@ -72,12 +73,37 @@
               <td>Решение; Протокол; Дата; Общества с ограниченной ответственностью;</td>
               <td>ИНН; Полное название организации; ФИО руководителя</td>
               <td>
-                <div class="btn modal-open">Изменить</div>
+                <div class="btn modal-open" id="change-btn">Изменить</div>
               </td>
             </tr>
           </table>
 
-          <div class="modal-fade">
+          <div class="modal-fade" id="modal-admin-settings">
+            <div class="modal">
+              <div class="modal-title">Настройки</div>
+              <div class="form">
+                <label id="img_category_label" class="field" for="img_category" data-value="">
+                  <span>OCR</span>
+                  <div id="img_category" class="psuedo_select" name="img_category">
+                    <span class="selected"></span>
+                    <ul id="img_category_options" class="options">
+                      <li class="option" data-value=" opt_1">Option 1</li>
+                      <li class="option" data-value=" opt_2">Option 2</li>
+                      <li class="option" data-value=" opt_3">Option 3</li>
+                      <li class="option" data-value=" opt_4">Option 4</li>
+                    </ul>
+                  </div>
+                </label>
+                <input type="text" placeholder="API-KEY" class="input">
+              </div>
+              <div class="bottom-btn-block">
+                <div class="bottom-btn">Сохранить</div>
+                <a class="modal-close bottom-btn">Закрыть</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-fade" id="modal-admin-change">
             <div class="modal">
               <div class="modal-title">Устав</div>
               <div class="area-block">
@@ -92,11 +118,10 @@
               </div>
               <div class="bottom-btn-block">
                 <div class="bottom-btn">Загрузить</div>
-                <a class="modal-close bottom-btn">Закрыть</div class="bottom-btn">
+                <a class="modal-close bottom-btn">Закрыть</a>
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </div>
@@ -104,6 +129,7 @@
   </div>
 
   <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+  <script src="js/select.js"></script>
   <script src="js/main.js"></script>
 </body>
 

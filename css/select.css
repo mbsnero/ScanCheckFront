@@ -109,6 +109,7 @@ label.field .psuedo_select .selected {
 }
 
 label.field .psuedo_select ul {
+  z-index: 9000 !important;
   background: #fff;
   -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
           box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
@@ -123,12 +124,11 @@ label.field .psuedo_select ul {
   -webkit-transition-property: height, opacity;
   transition-property: height, opacity;
   width: 100%;
-  z-index: 2;
 }
 
 label.field .psuedo_select ul li {
+  z-index: 9000 !important;
   font-size: 15px;
-  height: 18px;
   background-color: #ebebeb;
   margin: 0;
   padding: 8px 4px;
@@ -162,5 +162,9 @@ label.field.focused .psuedo_select::after {
 label.field.focused .psuedo_select ul {
   opacity: 1;
   pointer-events: all;
+}
+
+.field.focused .field {
+  display: none;
 }
 /*# sourceMappingURL=select.css.map */
