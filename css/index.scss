@@ -121,6 +121,17 @@ $input-background: #ebebeb;
   }
 }
 
+.modal-close {
+  font-size: 18px;
+  font-weight: bold;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  width: 100%;
+  margin-bottom: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
 .modal-title {
   width: 100%;
   padding-top: 24px;
@@ -165,6 +176,11 @@ $input-background: #ebebeb;
 }
 
 /* ====================   INPUT FILE   ==================== */
+
+.example-2 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
 
 .example-2 .btn-tertiary {
   color: white;
@@ -394,6 +410,48 @@ $input-background: #ebebeb;
       flex-direction: column;
       padding: 20px 50px 0;
       margin-top: 20px;
+    }
+  }
+
+  .modal-show-2 {
+    width: 900px!important;
+    margin-bottom: 100px;
+    border-top-right-radius: 0px;
+    overflow: auto;
+    height: 100%!important;
+    margin-left: -450px;
+
+    .modal-title {
+      border-top-right-radius: 0px;
+      display: flex;
+      height: 80px;
+      margin-top: 0;
+      padding-top: 0;
+
+      div {
+        width: 75%;
+        padding-top: 25px;
+      }
+
+      a {
+        width: 25%;
+        margin: 0;
+        font-size: 30px;
+        font-weight: normal;
+        border-radius: 25px 0 0 25px;
+        padding-top: 25px;
+        height: 80px!important;
+      }
+    }
+    .modal-main {
+      padding: 40px;
+
+      line-height: 30px;
+
+      img {
+        width: 100%;
+        margin-top: 20px;
+      }
     }
   }
 }

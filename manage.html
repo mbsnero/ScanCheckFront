@@ -111,28 +111,35 @@
 
     <div class="modal-fade" id="modal-show-2">
       <div class="modal modal-show-2">
-        <div class="modal-title">Просмотр документа</div>
-        123
-        <a class="close-btn btn">Закрыть</a>
+        <div class="modal-title"><div>Просмотр документа</div>
+          <a class="modal-close btn">Закрыть</a>
+        </div>
+        <div class="modal-main">
+          <b>При проверке щаблона найдено:</b> слово устав - ок
+          <br>
+          <b>При проверке текста документа найдено:</b> Общество с ограниченной ответственностью "Тандем" - ок
+          <img src="images/scan.jpg" alt="">
+        </div>
       </div>
     </div>
 
     <div class="modal-fade" id="modal-check">
       <div class="modal">
         <div class="modal-title">Новая проверка</div>
-        <div class="form" style="margin-top: 0; padding-top: 0;">
-          <label id="img_category_label" class="field" for="img_category" data-value="">
-            <span>Выберете существующую организацию</span>
-            <div id="img_category" class="psuedo_select" name="img_category">
-              <span class="selected"></span>
-              <ul id="img_category_options" class="options">
-                <li class="option" data-value=" opt_1">Организация 1</li>
-                <li class="option" data-value=" opt_2">Организация 2</li>
-                <li class="option" data-value=" opt_3">Организация 3</li>
-                <li class="option" data-value=" opt_4">Организация 4</li>
-              </ul>
-            </div>
-          </label>
+        <div class="form" style="padding-top: 0;">
+
+          <div class="sel sel--black-panther">
+            <select name="select-profession" id="select-profession">
+              <option value="" disabled>Выберете существующую организацию</option>
+              <option value="org1">Организация 1</option>
+              <option value="org2">Организация 2</option>
+              <option value="org3">Организация 3</option>
+              <option value="org4">Организация 4</option>
+              <option value="org5">Организация 5</option>
+            </select>
+          </div>
+          
+          <hr class="rule">
 
           <input class="input" type="text" placeholder="Введите ИНН организации">
           <input class="input" type="text" placeholder="Введите полное наименование организации">
@@ -142,31 +149,27 @@
           
           <!-- select -->
 
-          <label id="img_category_label" class="field" for="img_category" data-value="">
-            <span>Версия парсера</span>
-            <div id="img_category" class="psuedo_select" name="img_category">
-              <span class="selected"></span>
-              <ul id="img_category_options" class="options">
-                <li class="option" data-value=" opt_1">Для ООО</li>
-                <li class="option" data-value=" opt_2">Для ИП</li>
-                <li class="option" data-value=" opt_3">Для АО</li>
-                <li class="option" data-value=" opt_4">Для ПАО</li>
-              </ul>
-            </div>
-          </label>
-
-          <label id="img_category_label" class="field" for="img_category" data-value="">
-            <span>Тип загружаемого документа</span>
-            <div id="img_category" class="psuedo_select" name="img_category">
-              <span class="selected"></span>
-              <ul id="img_category_options" class="options">
-                <li class="option" data-value=" opt_1">Документ 1</li>
-                <li class="option" data-value=" opt_2">Документ 2</li>
-                <li class="option" data-value=" opt_3">Документ 3</li>
-                <li class="option" data-value=" opt_4">Документ 4</li>
-              </ul>
-            </div>
-          </label>
+          <div class="sel sel--black-panther">
+            <select name="select-profession" id="select-profession">
+              <option value="" disabled>Выберете версию парсера</option>
+              <option value="hacker">Для ООО</option>
+              <option value="gamer">Для ИП</option>
+              <option value="developer">Для АО</option>
+              <option value="programmer">Для ПАО</option>
+            </select>
+          </div>
+          
+          <hr class="rule">
+          
+          <div class="sel sel--superman">
+            <select name="select-superpower" id="select-superpower">
+              <option value="" disabled>Выберете тип файла</option>
+              <option value="type1">PDF</option>
+              <option value="type2">Microsoft Word</option>
+              <option value="type3">JPG</option>
+              <option value="type4">PNG</option>
+            </select>
+          </div>
 
           <div class="example-2">
             <div class="form-group">

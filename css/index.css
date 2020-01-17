@@ -104,8 +104,18 @@
   margin-bottom: 0 !important;
 }
 
-.modal-show .close-btn,
-.modal-show-2 .close-btn {
+.modal-show .close-btn {
+  font-size: 18px;
+  font-weight: bold;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  width: 100%;
+  margin-bottom: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.modal-close {
   font-size: 18px;
   font-weight: bold;
   padding-top: 25px;
@@ -162,6 +172,11 @@
 }
 
 /* ====================   INPUT FILE   ==================== */
+.example-2 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 .example-2 .btn-tertiary {
   color: white;
   padding: 0;
@@ -401,6 +416,50 @@
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 20px 50px 0;
+  margin-top: 20px;
+}
+
+.manage-page .modal-show-2 {
+  width: 900px !important;
+  margin-bottom: 100px;
+  border-top-right-radius: 0px;
+  overflow: auto;
+  height: 100% !important;
+  margin-left: -450px;
+}
+
+.manage-page .modal-show-2 .modal-title {
+  border-top-right-radius: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 80px;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.manage-page .modal-show-2 .modal-title div {
+  width: 75%;
+  padding-top: 25px;
+}
+
+.manage-page .modal-show-2 .modal-title a {
+  width: 25%;
+  margin: 0;
+  font-size: 30px;
+  font-weight: normal;
+  border-radius: 25px 0 0 25px;
+  padding-top: 25px;
+  height: 80px !important;
+}
+
+.manage-page .modal-show-2 .modal-main {
+  padding: 40px;
+  line-height: 30px;
+}
+
+.manage-page .modal-show-2 .modal-main img {
+  width: 100%;
   margin-top: 20px;
 }
 /*# sourceMappingURL=index.css.map */
