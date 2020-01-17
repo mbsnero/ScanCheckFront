@@ -64,6 +64,14 @@
 }
 
 /* ====================   MODAL   ==================== */
+#modal-admin-change .modal {
+  height: 612px;
+}
+
+#modal-admin-settings .modal {
+  height: 335px !important;
+}
+
 .modal-fade {
   display: none;
 }

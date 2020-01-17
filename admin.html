@@ -82,19 +82,17 @@
             <div class="modal">
               <div class="modal-title">Настройки</div>
               <div class="form">
-                <label id="img_category_label" class="field" for="img_category" data-value="">
-                  <span>OCR</span>
-                  <div id="img_category" class="psuedo_select" name="img_category">
-                    <span class="selected"></span>
-                    <ul id="img_category_options" class="options">
-                      <li class="option" data-value=" opt_1">Option 1</li>
-                      <li class="option" data-value=" opt_2">Option 2</li>
-                      <li class="option" data-value=" opt_3">Option 3</li>
-                      <li class="option" data-value=" opt_4">Option 4</li>
-                    </ul>
-                  </div>
-                </label>
-                <input type="text" placeholder="API-KEY" class="input">
+                <div class="sel sel--black-panther">
+                  <select name="select-profession" id="select-profession">
+                    <option value="" disabled>OCR</option>
+                    <option value="org1">Option 1</option>
+                    <option value="org2">Option 2</option>
+                    <option value="org3">Option 3</option>
+                    <option value="org4">Option 4</option>
+                    <option value="org5">Option 5</option>
+                  </select>
+                </div>
+                <input type="text" placeholder="API-KEY" class="input" style="margin-top: 40px;">
               </div>
               <div class="bottom-btn-block">
                 <div class="bottom-btn">Сохранить</div>
